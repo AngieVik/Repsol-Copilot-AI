@@ -1,0 +1,8 @@
+{
+  "name": "Repsol Copilot AI",
+  "description": "Asistente de conducción inteligente que monitorea estaciones Repsol, tráfico y clima en tiempo real.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}
