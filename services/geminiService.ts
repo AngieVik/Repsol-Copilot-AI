@@ -145,16 +145,18 @@ export const analyzeRouteContext = async (
       }
     `;
 
-    const response = await ai.models.generateContent({
+  const response = await ai.models.generateContent({
       model: MODEL_NAME,
       contents: prompt,
       config: {
         // Enable BOTH Maps and Search
+        // @ts-ignore: Tool types may not explicitly include googleMaps in the current SDK definition
         tools: [
           { googleMaps: {} },
           { googleSearch: {} }
         ],
         toolConfig: {
+           // @ts-ignore: retrievalConfig types check
           retrievalConfig: {
             latLng: {
               latitude: location.latitude,
