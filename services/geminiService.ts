@@ -2,7 +2,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { GeoCoordinates, ScanResult, SearchPreferences } from "../types";
 
-const MODEL_NAME = "gemini-2.5-flash";
+const MODEL_NAME = "gemini-2.0-flash-exp";
 
 // Helper to clean and parse JSON from Markdown text response
 const parseJsonFromText = (text: string): any => {
