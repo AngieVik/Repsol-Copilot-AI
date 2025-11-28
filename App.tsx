@@ -19,8 +19,11 @@ const App: React.FC = () => {
   const [showVoiceHelp, setShowVoiceHelp] = useState(false);
   
   // API Key State (Env OR Local Storage)
-  const [apiKey, setApiKey] = useState<string>(() => {
-    return localStorage.getItem('gemini_api_key') || process.env.API_KEY || '';
+ // App.tsx CORREGIDO:
+const [apiKey, setApiKey] = useState<string>(() => {
+  // Solo busca en local storage o inicia vacío para que el usuario la ponga
+  return localStorage.getItem('gemini_api_key') || '';
+
   });
 
   const handleUpdateApiKey = (key: string) => {
